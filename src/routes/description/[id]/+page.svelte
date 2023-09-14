@@ -2,7 +2,7 @@
   /** @types {import ('./$types').PageData}*/
   export let data;
 
-  console.log("detail", data);
+  // console.log("detail", data);
 
   /** @type {import (./)}*/
 
@@ -11,11 +11,12 @@
 </script>
 
 <div class="">
-  <div class="items-center justify-center">
+  <h1 class="text-center mt-4 underline rounded-2xl font-extrabold text-lg">{data.strMeal}</h1>
+  <div class="items-center justify-center m-8">
     <img
       src={data.strMealThumb}
       alt=""
-      class="px-8 pt-8 w-auto h-96 rounded-md"
+      class=" w-auto h-80 p-2 rounded-3xl border-dotted border-2 border-black"
     />
   </div>
 
@@ -74,10 +75,15 @@
   </div>
 
   <div class="m-8">
-    <h1 class="text-center font-extrabold underline">Instructions</h1>
+    <h1
+      class="text-center font-extrabold underline text-red-700 bg-green-300 rounded p-2"
+    >
+      How to make {data.strMeal}
+    </h1>
     <div class="pt-4 text-lg text-justify">{data.strInstructions}</div>
   </div>
 
-
-  <div class="">Thank You</div>
+  <div class="text-center m-5  font-extrabold text-3xl">
+    Thank You 🙏
+  </div>
 </div>
