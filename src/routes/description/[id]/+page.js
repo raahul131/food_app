@@ -9,3 +9,4 @@ export async function load({ params }) {
   const details = recipeList.meals[0];
   return details;
 }
+ 
